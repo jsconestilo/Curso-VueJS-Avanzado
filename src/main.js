@@ -5,18 +5,12 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+import configFirebase from './configFirebase';
+
 Vue.config.productionTip = false;
 
 // Initialize Firebase
-const config = {
-  apiKey: 'AIzaSyBLRzzZxdcao08T1gsH5ZaWTpRIGvGC3cQ',
-  authDomain: 'platzi-rooms-e41c0.firebaseapp.com',
-  databaseURL: 'https://platzi-rooms-e41c0.firebaseio.com',
-  projectId: 'platzi-rooms-e41c0',
-  storageBucket: 'platzi-rooms-e41c0.appspot.com',
-  messagingSenderId: '524662347801',
-};
-firebase.initializeApp(config);
+firebase.initializeApp(configFirebase);
 
 // Es necesario añadir un observador para los cambios en el estado de inicio de sesion
 // Es decir, este observador solo se activa cuando se inicia o se cierra sesion por el usuario actual
